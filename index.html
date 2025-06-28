@@ -2,72 +2,123 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="HAJI MUHAMMAD YAQOOB AND SONS is a 24/7 fruits and vegetables wholesale commission agency based in Pasrur's Old Sabzi Mandi." />
   <title>HAJI MUHAMMAD YAQOOB AND SONS</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
+
     body {
       font-family: Arial, sans-serif;
-      background: #f8f8f8;
-      color: #333;
-      line-height: 1.6;
+      background-color: black;
+      color: #0f0;
+      overflow-x: hidden;
     }
-    header {
-      background: #006400;
-      color: white;
-      padding: 20px 0;
-      text-align: center;
-    }
+
     .container {
-      max-width: 1000px;
+      padding: 40px 20px;
+      max-width: 800px;
       margin: auto;
-      padding: 20px;
+      position: relative;
+      z-index: 2;
     }
+
+    h1, h2 {
+      color: #0f0;
+      margin-bottom: 10px;
+    }
+
     .card {
-      background: white;
+      background-color: rgba(0, 255, 0, 0.05);
+      border: 1px solid #0f0;
       padding: 20px;
-      margin: 20px 0;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      margin-bottom: 20px;
     }
+
+    a {
+      color: #0f0;
+      text-decoration: underline;
+    }
+
     footer {
       text-align: center;
-      padding: 10px;
-      background: #333;
-      color: white;
-      position: relative;
-      bottom: 0;
-      width: 100%;
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #0f0;
     }
-    a {
-      color: #006400;
-      text-decoration: none;
+
+    /* Image Slider Styles */
+    .slider {
+      width: 100%;
+      max-width: 800px;
+      margin: 30px auto;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,255,0,0.3);
+    }
+
+    .slides {
+      display: flex;
+      width: 300%;
+      animation: scroll 12s infinite linear;
+    }
+
+    .slides img {
+      width: 100%;
+      height: auto;
+    }
+
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      33% { transform: translateX(-100%); }
+      66% { transform: translateX(-200%); }
+      100% { transform: translateX(0); }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>HAJI MUHAMMAD YAQOOB AND SONS</h1>
-    <p>Fruits & Vegetables Wholesale | Commission Agents</p>
-  </header>
 
   <div class="container">
+    <h1>HAJI MUHAMMAD YAQOOB AND SONS</h1>
+    <p><strong>Address:</strong> Old Sabzi Mandi, Near National Bank, Shop No.1</p>
+    <p><strong>Phone:</strong> 0321-6441598, 0340-6163863</p>
+    <p><strong>Email:</strong> <a href="mailto:hmy1598@gmail.com">hmy1598@gmail.com</a></p>
+    <p><strong>Open:</strong> 24 Hours</p>
+
+    <!-- Image Slider -->
+    <div class="slider">
+      <div class="slides">
+        <img src="https://via.placeholder.com/800x300?text=Fresh+Fruits" alt="Fresh Fruits">
+        <img src="https://via.placeholder.com/800x300?text=Vegetables+Wholesale" alt="Vegetables">
+        <img src="https://via.placeholder.com/800x300?text=Daily+Market+Rates" alt="Market Rates">
+      </div>
+    </div>
+
     <div class="card">
       <h2>About Us</h2>
-      <p>We are dedicated commission agents specializing in the wholesale of fresh fruits and vegetables. Located in Old Sabzi Mandi near National Bank, Shop No.1, we provide trusted and efficient services to traders, retailers, and distributors across the region. Operating 24/7 to support our clients' needs.</p>
+      <p>We are a trusted wholesale commission agency dealing in fresh fruits and vegetables. Located in Pasrur's historic Old Sabzi Mandi, our shop is open 24 hours to serve retailers and vendors across Punjab.</p>
     </div>
 
     <div class="card">
-      <h2>Contact Us</h2>
-      <p><strong>Address:</strong> Old Sabzi Mandi, Near National Bank, Shop No.1</p>
-      <p><strong>Phone:</strong> 0321-6441598, 0340-6163863</p>
-      <p><strong>Email:</strong> <a href="mailto:hmy1598@gmail.com">hmy1598@gmail.com</a></p>
-      <p><strong>Hours:</strong> Open 24 Hours</p>
+      <h2>Business Type</h2>
+      <p>Wholesale — Fruits & Vegetables (Commission Agent)</p>
     </div>
+
+    <div class="card">
+      <h2>Why Choose Us?</h2>
+      <ul>
+        <li>Trusted name in local mandi for years</li>
+        <li>24/7 availability</li>
+        <li>Fair, transparent dealing</li>
+        <li>Located at prime location (Near National Bank)</li>
+      </ul>
+    </div>
+
+    <footer>
+      <p>© 2025 HAJI MUHAMMAD YAQOOB AND SONS | Built by Hamad using GitHub Pages</p>
+    </footer>
   </div>
 
-  <footer>
-    <p>&copy; 2025 HAJI MUHAMMAD YAQOOB AND SONS. All rights reserved.</p>
-  </footer>
 </body>
 </html>
