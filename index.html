@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="HAJI MUHAMMAD YAQOOB AND SONS is a 24/7 fruits and vegetables wholesale commission agency based in Pasrur's Old Sabzi Mandi." />
   <title>HAJI MUHAMMAD YAQOOB AND SONS</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -65,30 +67,48 @@
       margin-left: 20px;
     }
 
+    /* ===== SLIDER ===== */
     .slider {
-      margin: 30px 0;
+      position: relative;
       overflow: hidden;
       border-radius: 15px;
+      height: 420px;
+      margin: 30px 0;
       box-shadow: 0 0 15px rgba(100, 221, 23, 0.3);
     }
 
     .slides {
       display: flex;
-      width: 300%;
-      animation: scroll 15s infinite linear;
+      transition: transform 0.6s ease-in-out;
     }
 
     .slides img {
       width: 100%;
-      height: auto;
+      height: 420px;
+      object-fit: cover;
+      flex-shrink: 0;
     }
 
-    @keyframes scroll {
-      0% { transform: translateX(0); }
-      33% { transform: translateX(-100%); }
-      66% { transform: translateX(-200%); }
-      100% { transform: translateX(0); }
+    .nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.7);
+      color: #64dd17;
+      border: none;
+      font-size: 28px;
+      padding: 10px 16px;
+      cursor: pointer;
+      border-radius: 50%;
     }
+
+    .nav:hover {
+      background: #64dd17;
+      color: #000;
+    }
+
+    .prev { left: 10px; }
+    .next { right: 10px; }
 
     footer {
       text-align: center;
@@ -112,9 +132,11 @@
 
     @media (max-width: 600px) {
       header h1 { font-size: 1.8em; }
+      .slider, .slides img { height: 300px; }
     }
   </style>
 </head>
+
 <body>
 
   <header>
@@ -124,15 +146,18 @@
 
   <div class="container">
 
-    <!-- Image Slider -->
+    <!-- ===== IMAGE SLIDER ===== -->
     <div class="slider">
-      <div class="slides">
+      <div class="slides" id="slides">
         <img src="IMG-20251201-WA0023.jpg">
         <img src="IMG-20251201-WA0021.jpg">
         <img src="IMG-20251201-WA0019.jpg">
         <img src="IMG-20251201-WA0017.jpg">
         <img src="IMG-20251201-WA0015.jpg">
       </div>
+
+      <button class="nav prev" onclick="prevSlide()">❮</button>
+      <button class="nav next" onclick="nextSlide()">❯</button>
     </div>
 
     <div class="card">
@@ -161,11 +186,35 @@
       <p><strong>Phone:</strong> 0321-6441598, 0340-6163863</p>
       <p><strong>Email:</strong> <a href="mailto:hmy1598@gmail.com">hmy1598@gmail.com</a></p>
     </div>
+
   </div>
 
   <footer>
     <p>© 2025 HAJI MUHAMMAD YAQOOB AND SONS | Built with ❤️ by *ABDULLAH SULEMAN*</p>
   </footer>
+
+  <!-- ===== SLIDER JS ===== -->
+  <script>
+    let index = 0;
+    const slides = document.getElementById("slides");
+    const totalSlides = slides.children.length;
+
+    function showSlide() {
+      slides.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    function nextSlide() {
+      index = (index + 1) % totalSlides;
+      showSlide();
+    }
+
+    function prevSlide() {
+      index = (index - 1 + totalSlides) % totalSlides;
+      showSlide();
+    }
+
+    setInterval(nextSlide, 4000);
+  </script>
 
 </body>
 </html>
