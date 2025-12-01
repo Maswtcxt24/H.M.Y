@@ -12,20 +12,57 @@
 *{margin:0;padding:0;box-sizing:border-box}
 body{
   font-family:'Poppins',sans-serif;
-  background:#f5f6f8;
-  color:#333;
   line-height:1.7;
+  transition:0.4s;
 }
 
-header{
+/* ========== LIGHT THEME (DEFAULT) ========== */
+body.light{
+  background:#f5f6f8;
+  color:#333;
+}
+
+body.light header{
   background:linear-gradient(90deg,#0a3d62,#1e90ff);
-  color:white;
+  color:#fff;
+}
+
+body.light .section{
+  background:#fff;
+}
+
+body.light footer{
+  background:#0a3d62;
+  color:#ccc;
+}
+
+/* ========== DARK THEME ========== */
+body.dark{
+  background:#111;
+  color:#eee;
+}
+
+body.dark header{
+  background:linear-gradient(90deg,#00c853,#64dd17);
+  color:#fff;
+}
+
+body.dark .section{
+  background:#1b1b1b;
+}
+
+body.dark footer{
+  background:#0d0d0d;
+  color:#aaa;
+}
+
+/* ========== COMMON CSS ========== */
+header{
   padding:50px 20px;
   text-align:center;
 }
 
 header h1{font-size:2.6em;margin-bottom:10px;}
-header p{font-size:1.1em;opacity:0.9}
 
 .container{
   max-width:1100px;
@@ -34,11 +71,10 @@ header p{font-size:1.1em;opacity:0.9}
 }
 
 .section{
-  background:white;
   border-radius:12px;
   padding:30px;
   margin-bottom:35px;
-  box-shadow:0 4px 12px rgba(0,0,0,0.08);
+  box-shadow:0 4px 12px rgba(0,0,0,0.15);
 }
 
 .section h2{
@@ -85,17 +121,14 @@ header p{font-size:1.1em;opacity:0.9}
 ul{margin-left:20px}
 li{margin-bottom:8px}
 
-/* ===== CONTACT ===== */
 .contact-box p{margin-bottom:10px}
 
-/* ===== MAP ===== */
 .map iframe{
   width:100%;
   height:280px;
   border-radius:10px;
 }
 
-/* ===== WHATSAPP ===== */
 .whatsapp{
   position:fixed;
   right:20px;
@@ -109,10 +142,22 @@ li{margin-bottom:8px}
 }
 
 footer{
-  background:#0a3d62;
-  color:#ccc;
   text-align:center;
   padding:20px;
+  font-size:14px;
+}
+
+/* ===== THEME SWITCH BUTTON ===== */
+.theme-btn{
+  position:fixed;
+  left:20px;
+  bottom:20px;
+  background:#1e90ff;
+  color:white;
+  border:none;
+  padding:10px 16px;
+  border-radius:25px;
+  cursor:pointer;
   font-size:14px;
 }
 
@@ -123,7 +168,7 @@ footer{
 </style>
 </head>
 
-<body>
+<body class="light">
 
 <header>
   <h1>HAJI MUHAMMAD YAQOOB AND SONS</h1>
@@ -145,72 +190,39 @@ footer{
   <button class="nav next" onclick="next()">❯</button>
 </div>
 
-<!-- ===== ABOUT US ===== -->
 <div class="section">
   <h2>About Us</h2>
-  <p>
-    HAJI MUHAMMAD YAQOOB AND SONS is a well-known and trusted name in the wholesale fruits and vegetables market of Pasrur.
-    With decades of experience in commission-based trading, we proudly serve retailers, vendors, and businesses across
-    Pasrur and nearby areas. Our business is built on honesty, transparency, and long-term relationships.
-  </p>
-  <p>
-    Located in the heart of the Old Sabzi Mandi near National Bank, our shop remains operational 24 hours a day to ensure
-    uninterrupted supply of fresh fruits and vegetables. We believe in providing consistent quality, fair pricing,
-    and reliable service to all our customers.
-  </p>
+  <p>HAJI MUHAMMAD YAQOOB AND SONS is a well-known and trusted name in the wholesale fruits and vegetables market of Pasrur. With decades of experience, we proudly serve retailers and vendors across Punjab.</p>
+  <p>Located in Old Sabzi Mandi near National Bank, we operate 24/7 with honesty and transparency.</p>
 </div>
 
-<!-- ===== SERVICES ===== -->
 <div class="section">
   <h2>Our Services</h2>
   <ul>
-    <li>Wholesale commission-based trading of fresh fruits and vegetables</li>
-    <li>Daily supply for shopkeepers, vendors, and retailers</li>
-    <li>Bulk purchase and sales facilitation</li>
-    <li>Market rate guidance and transparent dealing</li>
-    <li>24/7 availability for urgent supply needs</li>
+    <li>Wholesale fruits & vegetables</li>
+    <li>Commission-based trading</li>
+    <li>Bulk supply for vendors</li>
+    <li>24/7 availability</li>
   </ul>
 </div>
 
-<!-- ===== WHY CHOOSE US ===== -->
-<div class="section">
-  <h2>Why Choose Us</h2>
-  <p>
-    We understand the importance of trust, quality, and consistency in the wholesale business.
-    Our long-standing presence in Pasrur Mandi makes us one of the most reliable commission agents in the region.
-  </p>
-  <ul>
-    <li>Decades of market experience</li>
-    <li>Transparency in commission and dealings</li>
-    <li>Prime business location</li>
-    <li>Strong network of suppliers and buyers</li>
-    <li>24/7 operational support</li>
-    <li>Customer satisfaction as our top priority</li>
-  </ul>
-</div>
-
-<!-- ===== CONTACT ===== -->
 <div class="section contact-box">
   <h2>Contact Information</h2>
-  <p><strong>Business Name:</strong> Haji Muhammad Yaqoob and Sons</p>
   <p><strong>Address:</strong> Old Sabzi Mandi, Near National Bank, Shop No. 1, Pasrur</p>
   <p><strong>Phone:</strong> 0321-6441598, 0340-6163863</p>
   <p><strong>Email:</strong> hmy1598@gmail.com</p>
-  <p><strong>Business Hours:</strong> Open 24 Hours, 7 Days a Week</p>
 </div>
 
-<!-- ===== MAP ===== -->
 <div class="section map">
   <h2>Our Location</h2>
-  <iframe 
-    src="https://maps.google.com/maps?q=Old%20Sabzi%20Mandi%20Pasrur&t=&z=14&ie=UTF8&iwloc=&output=embed">
-  </iframe>
+  <iframe src="https://maps.google.com/maps?q=Old%20Sabzi%20Mandi%20Pasrur&t=&z=14&ie=UTF8&iwloc=&output=embed"></iframe>
 </div>
 
 </div>
 
-<!-- ===== WHATSAPP BUTTON ===== -->
 <a class="whatsapp" href="https://wa.me/923216441598">💬</a>
+
+<button class="theme-btn" onclick="toggleTheme()">Switch Theme</button>
 
 <footer>
 © 2025 HAJI MUHAMMAD YAQOOB AND SONS | Designed & Developed by ABDULLAH SULEMAN
@@ -227,6 +239,13 @@ function show(){
 function next(){index=(index+1)%total;show();}
 function prev(){index=(index-1+total)%total;show();}
 setInterval(next,4000);
+
+/* ===== THEME TOGGLE ===== */
+function toggleTheme(){
+  const body=document.body;
+  body.classList.toggle("dark");
+  body.classList.toggle("light");
+}
 </script>
 
 </body>
