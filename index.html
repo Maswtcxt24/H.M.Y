@@ -4,49 +4,60 @@
 <meta charset="UTF-8">
 <title>HAJI MUHAMMAD YAQOOB AND SONS</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="HAJI MUHAMMAD YAQOOB AND SONS is a trusted wholesale commission agency of fruits and vegetables in Pasrur, offering 24/7 quality service.">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}
+*{margin:0;padding:0;box-sizing:border-box}
 body{
   font-family:'Poppins',sans-serif;
-  background:#111;color:#f0f0f0;
+  background:#f5f6f8;
+  color:#333;
+  line-height:1.7;
 }
 
 header{
-  background:linear-gradient(90deg,#00c853,#64dd17);
-  padding:40px 20px;text-align:center;
+  background:linear-gradient(90deg,#0a3d62,#1e90ff);
+  color:white;
+  padding:50px 20px;
+  text-align:center;
 }
 
-header h1{font-size:2.5em;}
-.container{max-width:1000px;margin:auto;padding:40px 20px;}
+header h1{font-size:2.6em;margin-bottom:10px;}
+header p{font-size:1.1em;opacity:0.9}
 
-.card{
-  background:#1b1b1b;
-  border-left:5px solid #64dd17;
-  padding:20px;border-radius:10px;
-  margin-bottom:30px;
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:50px 20px;
 }
 
-h2{color:#64dd17;margin-bottom:10px;}
+.section{
+  background:white;
+  border-radius:12px;
+  padding:30px;
+  margin-bottom:35px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
 
-a{color:#64dd17;text-decoration:none;}
-
-ul{margin-left:20px}
+.section h2{
+  color:#1e90ff;
+  margin-bottom:15px;
+}
 
 /* ===== SLIDER ===== */
 .slider{
   position:relative;
   height:420px;
   overflow:hidden;
-  border-radius:15px;
-  margin-bottom:30px;
+  border-radius:12px;
+  margin-bottom:40px;
 }
 
 .slides{
   display:flex;
-  transition:0.5s ease-in-out;
+  transition:.6s ease-in-out;
 }
 
 .slides img{
@@ -60,39 +71,29 @@ ul{margin-left:20px}
   position:absolute;
   top:50%;
   transform:translateY(-50%);
-  font-size:26px;
-  background:rgba(0,0,0,0.7);
-  color:#64dd17;
+  background:rgba(0,0,0,.6);
+  color:white;
   border:none;
+  font-size:26px;
   padding:10px 16px;
   border-radius:50%;
   cursor:pointer;
 }
+.prev{left:12px}
+.next{right:12px}
 
-.prev{left:10px}
-.next{right:10px}
-
-/* ===== DOTS ===== */
-.dots{
-  position:absolute;
-  bottom:10px;
-  width:100%;
-  text-align:center;
-}
-.dot{
-  height:10px;width:10px;
-  border-radius:50%;
-  background:#777;
-  display:inline-block;
-  margin:0 4px;
-}
-.active{background:#64dd17}
+ul{margin-left:20px}
+li{margin-bottom:8px}
 
 /* ===== CONTACT ===== */
-.contact{background:#161616;padding:20px;border-radius:10px}
+.contact-box p{margin-bottom:10px}
 
 /* ===== MAP ===== */
-.map iframe{width:100%;border-radius:10px;height:250px}
+.map iframe{
+  width:100%;
+  height:280px;
+  border-radius:10px;
+}
 
 /* ===== WHATSAPP ===== */
 .whatsapp{
@@ -100,30 +101,39 @@ ul{margin-left:20px}
   right:20px;
   bottom:20px;
   background:#25D366;
-  color:white;
+  color:#fff;
+  font-size:28px;
   padding:14px 18px;
   border-radius:50%;
-  font-size:28px;
+  text-decoration:none;
 }
 
-footer{text-align:center;padding:20px;color:#777;}
+footer{
+  background:#0a3d62;
+  color:#ccc;
+  text-align:center;
+  padding:20px;
+  font-size:14px;
+}
 
 @media(max-width:600px){
   .slider,.slides img{height:300px}
+  header h1{font-size:2em}
 }
 </style>
 </head>
+
 <body>
 
 <header>
   <h1>HAJI MUHAMMAD YAQOOB AND SONS</h1>
-  <p>Wholesale Fruits & Vegetables | Pasrur</p>
+  <p>Wholesale Commission Agents of Fruits & Vegetables | Pasrur | Serving 24/7</p>
 </header>
 
 <div class="container">
 
-<!-- ===== SLIDER ===== -->
-<div class="slider" id="slider">
+<!-- ===== IMAGE SLIDER ===== -->
+<div class="slider">
   <div class="slides" id="slides">
     <img src="IMG-20251201-WA0023.jpg">
     <img src="IMG-20251201-WA0021.jpg">
@@ -133,86 +143,90 @@ footer{text-align:center;padding:20px;color:#777;}
   </div>
   <button class="nav prev" onclick="prev()">❮</button>
   <button class="nav next" onclick="next()">❯</button>
-
-  <div class="dots" id="dots"></div>
 </div>
 
-<div class="card">
+<!-- ===== ABOUT US ===== -->
+<div class="section">
   <h2>About Us</h2>
-  <p>We are trusted wholesale commission agents serving Pasrur for decades.</p>
+  <p>
+    HAJI MUHAMMAD YAQOOB AND SONS is a well-known and trusted name in the wholesale fruits and vegetables market of Pasrur.
+    With decades of experience in commission-based trading, we proudly serve retailers, vendors, and businesses across
+    Pasrur and nearby areas. Our business is built on honesty, transparency, and long-term relationships.
+  </p>
+  <p>
+    Located in the heart of the Old Sabzi Mandi near National Bank, our shop remains operational 24 hours a day to ensure
+    uninterrupted supply of fresh fruits and vegetables. We believe in providing consistent quality, fair pricing,
+    and reliable service to all our customers.
+  </p>
 </div>
 
-<div class="card">
-  <h2>Why Choose Us?</h2>
+<!-- ===== SERVICES ===== -->
+<div class="section">
+  <h2>Our Services</h2>
   <ul>
-    <li>Open 24/7</li>
-    <li>Fair Commission</li>
-    <li>Prime Location</li>
+    <li>Wholesale commission-based trading of fresh fruits and vegetables</li>
+    <li>Daily supply for shopkeepers, vendors, and retailers</li>
+    <li>Bulk purchase and sales facilitation</li>
+    <li>Market rate guidance and transparent dealing</li>
+    <li>24/7 availability for urgent supply needs</li>
   </ul>
 </div>
 
-<div class="contact">
-  <h2>Contact</h2>
-  <p>📍 Old Sabzi Mandi, Near National Bank</p>
-  <p>📞 0321-6441598 | 0340-6163863</p>
-  <p>📧 hmy1598@gmail.com</p>
+<!-- ===== WHY CHOOSE US ===== -->
+<div class="section">
+  <h2>Why Choose Us</h2>
+  <p>
+    We understand the importance of trust, quality, and consistency in the wholesale business.
+    Our long-standing presence in Pasrur Mandi makes us one of the most reliable commission agents in the region.
+  </p>
+  <ul>
+    <li>Decades of market experience</li>
+    <li>Transparency in commission and dealings</li>
+    <li>Prime business location</li>
+    <li>Strong network of suppliers and buyers</li>
+    <li>24/7 operational support</li>
+    <li>Customer satisfaction as our top priority</li>
+  </ul>
 </div>
 
-<div class="map">
-<iframe 
-src="https://maps.google.com/maps?q=Old%20Sabzi%20Mandi%20Pasrur&t=&z=13&ie=UTF8&iwloc=&output=embed">
-</iframe>
+<!-- ===== CONTACT ===== -->
+<div class="section contact-box">
+  <h2>Contact Information</h2>
+  <p><strong>Business Name:</strong> Haji Muhammad Yaqoob and Sons</p>
+  <p><strong>Address:</strong> Old Sabzi Mandi, Near National Bank, Shop No. 1, Pasrur</p>
+  <p><strong>Phone:</strong> 0321-6441598, 0340-6163863</p>
+  <p><strong>Email:</strong> hmy1598@gmail.com</p>
+  <p><strong>Business Hours:</strong> Open 24 Hours, 7 Days a Week</p>
+</div>
+
+<!-- ===== MAP ===== -->
+<div class="section map">
+  <h2>Our Location</h2>
+  <iframe 
+    src="https://maps.google.com/maps?q=Old%20Sabzi%20Mandi%20Pasrur&t=&z=14&ie=UTF8&iwloc=&output=embed">
+  </iframe>
 </div>
 
 </div>
 
+<!-- ===== WHATSAPP BUTTON ===== -->
 <a class="whatsapp" href="https://wa.me/923216441598">💬</a>
 
 <footer>
-© 2025 HAJI MUHAMMAD YAQOOB AND SONS
+© 2025 HAJI MUHAMMAD YAQOOB AND SONS | Designed & Developed by ABDULLAH SULEMAN
 </footer>
 
 <script>
 let index=0;
 const slides=document.getElementById("slides");
 const total=slides.children.length;
-const dots=document.getElementById("dots");
-let interval;
-
-for(let i=0;i<total;i++){
-  let d=document.createElement("span");
-  d.className="dot";
-  d.onclick=()=>{index=i;show();}
-  dots.appendChild(d);
-}
 
 function show(){
   slides.style.transform=`translateX(-${index*100}%)`;
-  document.querySelectorAll(".dot").forEach((d,i)=>{
-    d.classList.toggle("active",i===index);
-  });
 }
-
 function next(){index=(index+1)%total;show();}
 function prev(){index=(index-1+total)%total;show();}
-
-function start(){interval=setInterval(next,4000);}
-function stop(){clearInterval(interval);}
-
-document.getElementById("slider").addEventListener("mouseenter",stop);
-document.getElementById("slider").addEventListener("mouseleave",start);
-
-start();
-show();
-
-/* ===== MOBILE SWIPE ===== */
-let startX=0;
-slides.addEventListener("touchstart",e=>startX=e.touches[0].clientX);
-slides.addEventListener("touchend",e=>{
-  let endX=e.changedTouches[0].clientX;
-  if(endX<startX-50)next();
-  if(endX>startX+50)prev();
-});
+setInterval(next,4000);
 </script>
 
 </body>
